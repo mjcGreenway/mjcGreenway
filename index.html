@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>캠퍼스 클린존 안내</title>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+        <!-- 상단 헤더 -->
+        <header class="header">
+            <div class="leftGroup">
+                <img src="img/logo.png" alt="로고" class="logo" >
+                <img src="img/mascot.png" alt="마스코트" class="mascot">
+            </div>
+            <button class="menuButton" onclick="toggleMenu()">☰</button>
+        </header>
+        <!-- 메뉴 -->
+        <nav class="menu" id="menu">
+            <a href="map.html">전체 지도 보기</a>
+            <a href="#">소개</a>
+            <a href="#">문의</a>
+        </nav>
+        <!-- 제목 -->
+        <h1 class="mainTitle">캠퍼스 클린존 안내</h1>
+        <!-- 전체 지도 버튼 -->
+        <a href="map.html" class="mapButton">전체 지도 보기</a>
+
+        <!-- 건물 목록 그리드 섹션 -->
+        <section class="buildingGrid">
+            <a href="main.html" class="building">
+            <img src="img/main.png" alt="본관">
+            <p>본관</p>
+            </a>
+            <a href="engineering.html" class="building">
+            <img src="img/engineering.png" alt="공학관">
+            <p>공학관</p>
+            </a>
+            <a href="arts.html" class="building">
+            <img src="img/arts.png" alt="예체능관">
+            <p>예체능관</p>
+            </a>
+            <a href="social.html" class="building">
+            <img src="img/social.png" alt="사회교육관">
+            <p>사회교육관</p>
+            </a>
+            <a href="research.html" class="building">
+            <img src="img/reserch.png" alt="연구동">
+            <p>연구동</p>
+            </a>
+            <a href="library.html" class="building">
+            <img src="img/library.png" alt="도서관">
+            <p>도서관</p>
+            </a>
+        </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>개발자: MJC GEENWAY team</p>
+        <p>Email: campusharmony57@gmail.com</p>
+    </footer>
+    <!-- 위로 가기 버튼 -->
+    <button class="goTopButton" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</button>
+
+    <script src="script.js" defer></script>
+    </body>
+</html>
