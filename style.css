@@ -1,0 +1,162 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  font-family: '맑은 고딕', sans-serif;
+  background-color: #fff8d5;
+  color: #222;
+}
+
+/* 헤더 영역 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.mascot {
+  width: 40px;
+  height: auto;
+}
+
+/* 제목 영역 */
+.mainTitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color : #19350C;
+  margin: 20px 0;
+}
+
+/* 전체 지도 보기 버튼 */
+.mapButton {
+  display: block;
+  text-align: center;
+  margin: 0 auto 24px;
+  padding: 12px 20px;
+  background-color: #2f5e2f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
+
+/* 건물 목록 2열 그리드 */
+.buildingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 한 줄에 두 칸. 각 칸 너비는 동일하게 1:1로 나눔 */
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.building {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.2s ease-in-out; /* 부드럽게 커지는 효과 */
+}
+
+
+.building:hover { /* 마우스 오버 시 확대 효과 */
+  transform: scale(1.03);
+}
+
+.building img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.building p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #f3eac2;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 위로가기 버튼 */
+.goTopButton {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background-color: #2f5e2f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 100;
+}
+
+.goTopButton:active {
+  background-color: #999999; /* 회색으로 눌림 효과 */
+}
+
+/* 메뉴 (처음엔 숨김) */
+.menu {
+  display: none; /* 처음엔 안 보임 */
+  flex-direction: column; /* 햄버거 메뉴 버튼을 누르면 display: flex로 바뀌며 짠! 하고 나타나는 구조예요 🎉*/
+  background-color: #2f5e2f;
+  color: white;
+  position: absolute;
+  top: 60px;
+  right: 16px;
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  background-color: #3f6f3f;
+}
+
+/* PC용 미디어쿼리 */
+@media screen and (min-width: 768px) {
+  .buildingGrid {
+    grid-template-columns: repeat(3, 1fr);  /* PC에서는 3열 */
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+  }
+
+  .building img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .building p {
+    font-size: 18px;
+  }
+}
