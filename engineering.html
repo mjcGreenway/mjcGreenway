@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공학관 층별 안내</title>
+  <link rel="stylesheet" href="engineering.css" />
+</head>
+<body>
+  <!-- 헤더 -->
+  <div class="header">
+    <a href="index.html"><img src="img/logo.png" alt="로고" class="logo" /></a>
+    <img src="img/mascot.png" alt="마스코트" class="mascot" />
+  </div>
+
+  <!-- 제목 -->
+  <h1 class="mainTitle">공학관 층별 쓰레기통 안내</h1>
+
+  <!-- 층 선택 버튼 -->
+  <div class="floorButtons">
+    <button onclick="showFloor('b1')">지하 1층</button>
+    <button onclick="showFloor('1f')">1층</button>
+    <button onclick="showFloor('2f')">2층</button>
+    <button onclick="showFloor('3f')">3층</button>
+    <button onclick="showFloor('4f')">4층</button>
+    <button onclick="showFloor('5f')">5층</button>
+    <button onclick="showFloor('6f')">6층</button>
+    <button onclick="showFloor('7f')">7층</button>
+    <button onclick="showFloor('8f')">8층</button>
+  </div>
+
+  <!-- 평면도 이미지 영역 -->
+  <div class="floorMap">
+    <img id="floorImage" src="img/engineering_1f.png" alt="1층 평면도" />
+
+    <!-- 예시 아이콘 -->
+    <button class="trashIcon" style="top: 45%; left: 35%;" onclick="openModal()"></button>
+  </div>
+
+  <!-- 모달 -->
+  <div class="modal" id="modal">
+    <div class="modalContent">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p><strong>분리수거 안내</strong></p>
+      <p id="modalText">해당 층 쓰레기통 정보가 여기에 표시됩니다.</p>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div class="footer">
+    © 2025 MJC Greenway | 개발자: MJC GREENWAY Team
+  </div>
+
+  <script src="engineering.js"></script>
+</body>
+</html>
