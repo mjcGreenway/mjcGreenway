@@ -1,27 +1,24 @@
 function showFloor(floorCode) {
   const floorImage = document.getElementById("floorImage");
-  floorImage.src = `img/main_${floorCode}.jpeg`;
+  floorImage.src = `img/main_${floorCode}.png`;
 
-  const floorInfo = {
-    b1: "지하 1층: 일반 쓰레기 / 캔 / 유리",
-    "1f": "1층: 일반 쓰레기 / 플라스틱",
-    "2f": "2층: 캔 / 종이 / 플라스틱",
-    "3f": "3층: 일반 쓰레기 / 종이",
-    "4f": "4층: 캔 / 플라스틱",
-    "5f": "5층: 종이 / 플라스틱",
-    "6f": "6층: 일반 쓰레기 / 유리",
-    "7f": "7층: 플라스틱 / 종이",
-    "8f": "8층: 캔 / 플라스틱",
-    "9f": "9층: 일반 쓰레기 / 캔"
-  };
+  const iconContainer = document.getElementById("iconContainer");
+  iconContainer.innerHTML = ""; // 기존 아이콘 제거
 
-  const modalText = document.getElementById("modalText");
-  if (modalText && floorInfo[floorCode]) {
-    modalText.textContent = floorInfo[floorCode];
+  // 2층은 아이콘 없음
+  const showIconFloors = ["3f", "4f", "5f", "6f", "7f", "8f", "9f"];
+  if (showIconFloors.includes(floorCode)) {
+    const btn = document.createElement("button");
+    btn.className = "trashIcon";
+    btn.style.top = "50%";
+    btn.style.left = "48%";
+    btn.onclick = () => openModal();
+    iconContainer.appendChild(btn);
   }
 }
 
 function openModal() {
+  document.getElementById("modalText").textContent = "분리수거로 환경을 보호해 주세요.";
   document.getElementById("modal").style.display = "flex";
 }
 
